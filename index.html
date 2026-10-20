@@ -1,1 +1,90 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b0a">
+  <title>Digital Archaeologist | Terminal 07</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="desktop">
+    <section class="terminal" aria-label="Research facility terminal">
+
+      <header class="terminal-header">
+        <div class="window-dots" aria-hidden="true">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+
+        <div class="window-title">
+          ARCHIVE TERMINAL // STATION 07
+        </div>
+
+        <div class="connection">
+          <span class="status-light"></span>
+          OFFLINE
+        </div>
+      </header>
+
+      <section class="screen">
+        <div class="brand">
+          <pre class="ascii" aria-label="Digital Archaeologist">
+ ____  ___ ____ ___ _____  _    _
+|  _ \|_ _/ ___|_ _|_   _|/ \  | |
+| | | || | |  _ | |  | | / _ \ | |
+| |_| || | |_| || |  | |/ ___ \| |___
+|____/|___\____|___| |_/_/   \_\_____|
+          </pre>
+          <p class="subtitle">DIGITAL ARCHAEOLOGY DIVISION</p>
+        </div>
+
+        <div class="warning">
+          ⚠ UNAUTHORIZED ARCHIVE ACCESS DETECTED
+        </div>
+
+        <div
+          id="output"
+          class="output"
+          role="log"
+          aria-live="polite"
+          aria-relevant="additions"
+        ></div>
+
+        <form id="command-form" class="command-line">
+          <label for="command-input" class="prompt">
+            visitor@station-07:~$
+          </label>
+          <input
+            id="command-input"
+            type="text"
+            placeholder="Type 'help' to begin..."
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            aria-label="Enter a terminal command"
+          >
+          <button type="submit" aria-label="Run command">
+            RUN ↵
+          </button>
+        </form>
+
+        <footer class="terminal-footer">
+          <span>MEMORY: <span id="memory-status">0 FILES</span></span>
+          <span>SECTOR: 07-A</span>
+          <span id="clock">SYSTEM READY</span>
+        </footer>
+      </section>
+    </section>
+
+    <p class="outside-note">
+      A forgotten facility. A corrupted archive. One last unanswered question.
+    </p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
