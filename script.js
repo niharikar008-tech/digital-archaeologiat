@@ -5,9 +5,7 @@ const input = document.getElementById("command-input");
 const memoryStatus = document.getElementById("memory-status");
 const clock = document.getElementById("clock");
 
-// --------------------------------------
-// 1. GAME DATA
-// --------------------------------------
+
 
 const files = {
   "welcome.txt": {
@@ -106,9 +104,6 @@ const secretFile = {
   ]
 };
 
-// --------------------------------------
-// 2. GAME STATE AND SAVED PROGRESS
-// --------------------------------------
 
 const SAVE_KEY = "digitalArchaeologistSave_v1";
 
@@ -172,9 +167,7 @@ function updateStatus() {
   clock.textContent = state.unlocked ? "ARCHIVE ACTIVE" : "SYSTEM READY";
 }
 
-// --------------------------------------
-// 3. OUTPUT HELPERS
-// --------------------------------------
+
 
 function print(text = "", type = "system") {
   const line = document.createElement("p");
@@ -215,9 +208,7 @@ function showFile(name) {
   print("FILE READ SUCCESSFULLY.", "system");
 }
 
-// --------------------------------------
-// 4. COMMAND REFERENCE
-// --------------------------------------
+
 
 function showHelp() {
   print("AVAILABLE COMMANDS", "success");
@@ -269,9 +260,7 @@ function showStatus() {
   divider();
 }
 
-// --------------------------------------
-// 5. PUZZLE LOGIC
-// --------------------------------------
+
 
 function unlockArchive(password) {
   if (state.unlocked) {
@@ -323,9 +312,6 @@ function showHint() {
   print("You have solved the mystery. Try 'status' to review.");
 }
 
-// --------------------------------------
-// 6. MAIN COMMAND PROCESSOR
-// --------------------------------------
 
 function executeCommand(rawCommand) {
   const commandLine = rawCommand.trim();
@@ -431,9 +417,7 @@ function executeCommand(rawCommand) {
   }
 }
 
-// --------------------------------------
-// 7. STARTUP AND INPUT EVENTS
-// --------------------------------------
+
 
 function boot() {
   print("DIGITAL ARCHAEOLOGY DIVISION // BUILD 7.04", "success");
