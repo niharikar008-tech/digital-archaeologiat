@@ -359,9 +359,19 @@ function executeCommand(rawCommand) {
           break;
         }
 
-        showFile("blackbox.enc");
-        printBlock(secretFile.content, "story");
-        state.completed = true;
+        
+if (!state.discovered.includes("blackbox.enc")) {
+  state.discovered.push("blackbox.enc");
+}
+
+divider();
+print(secretFile.title, "success");
+divider();
+printBlock(secretFile.content, "story");
+
+state.completed = true;
+saveState();
+
         saveState();
         divider();
         print("INVESTIGATION COMPLETE.", "success");
